@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="description" content="四川伍合信商网络科技有限公司"/>
+	<meta name='desinby' content="puhuasheng"/>        
+<meta  name="keywords" content="四川伍合信商网络科技有限公司"/>
+        <title>吾乐分享O2O电商平台</title>
+
+        <link rel="shortcut icon" href="images/logo.png">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    </head>
+    <body>
+        <div class="content">
+            <div class="wrap">
+                <div class="list" style='background:#d29338;'>
+                    <div class='list1_1'></div>
+                    <div class='list1_2'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list2_1'></div>
+                    <div class='list2_2'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list3_1'></div>
+                    <div class='list3_2'></div>
+                    <div class='list3_3'></div>
+                </div>
+                <div class="list" style='background:#d29338;'>
+                    <div class='list4_1'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list5_1'></div>
+                    <div class='list5_2'></div>
+                    <div class='list5_3'></div>
+                </div>
+                <div class="list" style='background:#d29338;'>
+                    <div class='list6_1'></div>
+                    <div class='list6_2'></div>
+                    <div class='list6_3'></div>
+                </div>
+                <div class="list" style='background:#d29338;'>
+                    <div class='list7_1'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list8_1'></div>
+                    <div class='list8_2'></div>
+                    <div class='list8_3'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list9_1'></div>
+                </div>
+                <div class="list" style='background:#d29338;'>
+                    <div class='list10_1'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list11_1'></div>
+                    <div class='list11_2'></div>
+                    <div class='list11_3'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list12_1'></div>
+                    <div class='list12_2'></div>
+                    <div class='list12_3'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list13_1'></div>
+                    <div class='list13_2'></div>
+                </div>
+                <div class="list" style='background:#d29338;'>
+                    <div class='list14_1'></div>
+                    <div class='list14_2'></div>
+                    <div class='list14_3'></div>
+                    <div class='list14_4'></div>
+                    <div class='list14_5'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list15_1'></div>
+                    <div class='list15_2'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list16_1'></div>
+                    <div class='list16_2'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list17_1'></div>
+                    <div class='list17_2'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list18_1'></div>
+                    <div class='list18_2'></div>
+                    <div class='list18_3'></div>
+                    <div class='list18_4'></div>
+                    <div class='list18_5'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list19_1'></div>
+                    <div class='list19_2'></div>
+                    <div class='list19_3'></div>
+                </div>
+
+                <div class="list" style='background:#fff;'>
+                    <div class='list21_1'></div>
+                    <div class='list21_2'></div>
+                </div>
+                <div class="list" style='background:#fff;'>
+                    <div class='list20_1'></div>
+                </div>
+            </div>
+        </div>
+        <!--<audio id="audio" src="../music/1.mp3" preload="auto" controls="controls" loop="true" hidden="true"> </audio>-->
+        <audio id="audio" src="music/1.mp3" preload="auto" controls="controls" loop="true" hidden="true"></audio>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.event.move.js"></script>
+        <script>
+            function Wuhe() {
+                this.init = function() {
+                    var myAuto = document.getElementById('audio');
+                    myAuto.play();
+                    return this;
+                };
+                this.currentPage = 0;
+                this.event = function() {
+                    var scale = this.scale;
+                    var self = this;
+                    $(window).on('resize load', function() {
+                        scale('.content');
+                    });
+                    $(window).on('load', function() {
+                        $($('.list')[0]).find('div').addClass('animate');
+                    });
+
+                    $('body').on('touchstart', function(e) {
+                        var myAuto = document.getElementById('audio');
+                        myAuto.play();
+                    });
+                    $('.content').on('moveend', function(e) {
+
+                        if (e.distY > 50) {
+//                              alert('向下');上一页
+                            if (self.currentPage > 0) {
+
+//                                $('.list').css({transform: 'translate(0,-' + (self.currentPage - 1) * 100 + '%)'});
+                                $('.wrap').css({'margin-top': '-' + (self.currentPage - 1) * 504 + 'px'});
+                                setTimeout(function() {
+                                    $($('.list')[self.currentPage - 1]).find('div').addClass('animate');
+                                    $($('.list')[self.currentPage]).find('div').removeClass('animate');
+                                    self.currentPage--;
+                                }, 1);
+                            }
+
+                        }
+                        else if (e.distY < -50) {
+//                              alert('向上');
+                            if (self.currentPage < $('.list').length - 1) {
+
+//                                $('.list').css({transform: 'translate(0,-' + (self.currentPage + 1) * 100 + '%)'});
+                                $('.wrap').css({'margin-top': '-' + (self.currentPage + 1) * 504 + 'px'});
+                                setTimeout(function() {
+                                    $($('.list')[self.currentPage + 1]).find('div').addClass('animate');
+                                    $($('.list')[self.currentPage]).find('div').removeClass('animate');
+                                    self.currentPage++;
+
+                                }, 1);
+
+                            }
+                        }
+                        if (e.distX > 50) {
+//                            var myAuto = document.getElementById('audio');
+//                            $('audio').attr('src', '../music/1.mp3');
+//                            myAuto.play();
+                        }
+                        else if (e.distX < -50) {
+//                            var myAuto = document.getElementById('audio');
+//                            $('audio').attr('src', '../music/2.mp3');
+//                            myAuto.play();
+                        }
+
+                    });
+
+                    return this;
+                };
+                this.scale = function(obj) {
+                    scalewidth = $(window).width() / 320.0;
+                    scaleheight = $(window).height() / 504.0;
+                    if (scalewidth - scaleheight > 1)
+                        scalewidth = scaleheight;
+//                    if (scaleheight - scalewidth > 1)
+//                        scaleheight = scalewidth;
+
+                    scalenum = scaleheight < scalewidth ? scalewidth : scaleheight;
+                    scalekey = 'scale(' + scalewidth + ',' + scaleheight + ')';
+                    $(obj).css({transform: scalekey});
+                };
+            }
+            var wuhe = new Wuhe();
+            $(function() {
+                wuhe.event().init();
+            });
+        </script>
+    </body>
+
+</html>
